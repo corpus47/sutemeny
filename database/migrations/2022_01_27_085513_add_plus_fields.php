@@ -21,6 +21,8 @@ class AddPlusFields extends Migration
             $table->string('city',255);
             $table->string('address',255);
             $table->string('phone',12);
+            $table->tinyInteger('privileg')->default('1');
+            $table->tinyInteger('active')->default('0');
         });
     }
 
@@ -39,6 +41,8 @@ class AddPlusFields extends Migration
             $table->dropColumn('city');
             $table->dropColumn('address');
             $table->dropColumn('phone');
+            $table->dropColumn('privileg');
+            $table->dropColumn('active');
         });
     }
 }
